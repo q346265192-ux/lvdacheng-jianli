@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visionary | Lu Dacheng Portfolio</title>
+    
+    <!-- SEO & Social Sharing Tags -->
+    <meta name="description" content="Visionary: AI Video Workflow Workbench by Lu Dacheng. Utilizing Gemini 3 Pro & Veo for cinematic production.">
+    <meta property="og:title" content="Visionary | 吕达成作品集">
+    <meta property="og:description" content="AI 视频架构师作品集。将非标创意解构为标准化数据流，实现 TVC 生产效率 90% 的工业化跨越。">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/q346265192-ux/visionary-media@main/01_setup_5.png">
+    <meta property="og:url" content="https://www.lvdacheng.top/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background: #020617; /* 预设深色背景，防止白屏刺眼 */
+            color: white;
+        }
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+        
+        /* Loading 状态样式 */
+        #root:empty::before {
+            content: 'SYSTEM INITIALIZING...';
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            letter-spacing: 0.5em;
+            color: #10b981; /* Emerald-500 */
+            font-weight: 900;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
