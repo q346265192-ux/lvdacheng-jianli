@@ -103,10 +103,6 @@ const WorksGallery = () => {
     setLocalWorks(prev => [...newWorks, ...prev]);
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) processFiles(e.target.files);
-  };
-
   const handleDragOver = useCallback((e: React.DragEvent) => { e.preventDefault(); setIsDragging(true); }, []);
   const handleDragLeave = useCallback((e: React.DragEvent) => { e.preventDefault(); if (e.currentTarget.contains(e.relatedTarget as Node)) return; setIsDragging(false); }, []);
   const handleDrop = useCallback((e: React.DragEvent) => { e.preventDefault(); setIsDragging(false); if (e.dataTransfer.files && e.dataTransfer.files.length > 0) processFiles(e.dataTransfer.files); }, []);
@@ -170,17 +166,6 @@ const WorksGallery = () => {
               // Cinematic AI Video Productions
             </p>
           </div>
-          {/* Hidden upload for viewers, visible for owner only technically, but kept for demo logic */}
-          <label className="group relative cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
-            <input type="file" accept="video/*,image/*" multiple onChange={handleFileUpload} className="hidden" />
-            <div className="flex items-center gap-4 px-6 py-2 bg-white/5 border border-white/10 rounded-full text-white font-black text-[10px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all">
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
-              本地添加作品
-            </div>
-            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 hidden md:block text-[10px] font-bold text-slate-400 bg-black/50 border border-white/10 backdrop-blur-md rounded-full px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-              支持拖拽或点击上传（仅本机浏览器保存）
-            </div>
-          </label>
         </div>
 
         {displayWorks.length > 0 ? (
