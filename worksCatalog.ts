@@ -17,6 +17,7 @@ export const WORKS: WorkItem[] = [
   { id: 95, name: '企业创意宣传', type: 'video', url: worksOssUrl('企业创意宣传.mp4') },
   { id: 94, name: '原生密码案例1', type: 'video', url: worksOssUrl('原生密码案例1.mp4') },
   { id: 93, name: '蓝月亮广告片-案例2', type: 'video', url: worksOssUrl('蓝月亮广告片-案例2.mp4') },
+  { id: 92, name: '赵云角色宣传片', type: 'video', url: worksOssUrl('赵云角色宣传片.mp4') },
 ];
 
 export const WORKS_VIDEO_URLS = WORKS.map((w) => w.url);
